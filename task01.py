@@ -18,7 +18,7 @@ def hill_climbing(func, bounds, iterations=1000, epsilon=1e-6):
             for direction in [-1, 1]:
                 neighbor = list(current)
                 neighbor[i] += direction * step_size
-                # Обмеження в межах bounds
+                
                 neighbor[i] = max(bounds[i][0], min(neighbor[i], bounds[i][1]))
                 
                 neighbor_eval = func(neighbor)
